@@ -1,4 +1,15 @@
 body{
     background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.header{
+    display: block;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-paragraph{
+    font-size: medium;
+}
