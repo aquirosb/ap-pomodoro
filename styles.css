@@ -35,7 +35,7 @@ body {
     font-size: 15px;
 }
 
-.btn {
+.pomodoro {
     font-family: 'Kanit', sans-serif;
     font-size: 16px;
     background-color: #5DB79F;
@@ -44,7 +44,46 @@ body {
     border-radius: 5px;
 }
 
-.btn:hover {
+.pomodoro:hover {
+    background-color: #ECE4C4;
+}
+
+.break {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    background-color: #5DB79F;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.break:hover {
+    background-color: #ECE4C4;
+}
+
+.start {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    background-color: #5DB79F;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.start:hover {
+    background-color: #ECE4C4;
+}
+
+.pause {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    background-color: #5DB79F;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.pause:hover {
     background-color: #ECE4C4;
 }
 
