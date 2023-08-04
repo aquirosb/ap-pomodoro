@@ -6,7 +6,7 @@ const pauseBtn = document.querySelector('.pause')
 
 const pomodoroMins = 25;
 let pomTime = pomodoroMins * 60;
-const breakMins = 1;
+const breakMins = 5;
 let breakTime = breakMins * 60;
 
 let interval = null
@@ -19,32 +19,36 @@ breakBtn.addEventListener('click', breakTimer)
 startBtn.addEventListener('click', startTimer)
 pauseBtn.addEventListener('click', pauseTimer)
 
+function formatTime(minutes, seconds) {
+    return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
 function pomodoroTimer(){
-    const minutes = Math.floor(pomTime/60);
+    let minutes = Math.floor(pomTime/60);
     let seconds = pomTime % 60;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    timeDisplay.innerHTML = `${minutes}:${seconds}`;
-    pomTime--;
-    pomodoroCounter = 1;
-    breakCounter = 0;
-    if(pomTime < 0){
-        clearInterval(interval)
-        timeDisplay.innerHTML = `00:00`;
-    } 
+    timeDisplay.innerHTML = formatTime(minutes, seconds)
+    if (pomTime <= 0) {
+        clearInterval(interval);
+        pomTime = pomodoroMins * 60;
+    } else {
+        pomTime--;
+        pomodoroCounter = 1;
+        breakCounter = 0;
+    }
 }
 
 function breakTimer(){
-    const minutes = Math.floor(breakTime/60);
+    let minutes = Math.floor(breakTime/60);
     let seconds = breakTime % 60;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    timeDisplay.innerHTML = `${minutes}:${seconds}`;
-    breakTime--;
-    pomodoroCounter = 0;
-    breakCounter = 1;
-    if(breakTime < 0){
-        clearInterval(interval)
-        timeDisplay.innerHTML = `00:00`;
-    } 
+    timeDisplay.innerHTML = formatTime(minutes, seconds)
+    if (breakTime <= 0) {
+        clearInterval(interval);
+        breakTime = breakMins * 60;
+    } else {
+        breakTime--;
+        pomodoroCounter = 0;
+        breakCounter = 1;
+    }
 }
 
 function startTimer(){
