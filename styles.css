@@ -87,9 +87,58 @@ body {
     background-color: #ECE4C4;
 }
 
+.add {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    background-color: #5DB79F;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.add:hover {
+    background-color: #ECE4C4;
+}
+
+.delete {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    background-color: #5DB79F;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.delete:hover {
+    background-color: #ECE4C4;
+}
+
 #time {
     font-family: 'Kanit', sans-serif;
     font-size: 100px;
     margin: 0;
+    color: #ECE4C4;
+}
+
+#taskInput {
+    font-family: 'Kanit', sans-serif;
+    width: 300px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+.tasks {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.uncompletedTasks {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#tasksOutput {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
     color: #ECE4C4;
 }
